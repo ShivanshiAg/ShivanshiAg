@@ -1,477 +1,283 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronRight, Github, Linkedin, Mail, Download, ExternalLink, Code, Database, Brain, BarChart, Award, Menu, X, Folder, Star, GitBranch } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivanshi Agarwal · Data Scientist & AI Engineer</title>
+  <meta name="description" content="Portfolio of Shivanshi Agarwal – Data Science, ML Engineering, Agentic AI, RAG, Forecasting, and MLOps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState('about');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const projects = [
-    {
-      id: 1,
-      title: "AI Trip Planner",
-      description: "Multi-agent AI pipeline for intelligent itinerary generation with tools, prompt library, and orchestrator to plan routes, stays, and budgets with callable tools.",
-      tech: ["Python", "LangGraph", "LangChain", "Agents", "Prompting"],
-      github: "https://github.com/ShivanshiAg/AI_Trip_Plannner",
-      category: "AI/ML",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Anime Recommender System",
-      description: "Content-based recommendation engine using embeddings with Chroma vector store. Includes Docker/K8s YAML for production LLMOps deployment.",
-      tech: ["Embeddings", "Chroma DB", "Docker", "Kubernetes", "Python"],
-      github: "https://github.com/ShivanshiAg/ANIME-RECOMMENDER",
-      category: "AI/ML",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Text-to-SQL RAG System",
-      description: "RAG-augmented natural language to SQL converter for multi-DB healthcare claims. Achieved ~40% query time reduction for operations teams.",
-      tech: ["RAG", "SQL", "Vector DB", "LangChain", "Healthcare"],
-      github: "https://github.com/ShivanshiAg",
-      category: "AI/ML",
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Retail Demand Forecasting",
-      description: "MSTL/TimeGPT baselines to forecast weekly store-SKU demand with comprehensive EDA and model comparison using sMAPE/MAE evaluation metrics.",
-      tech: ["Time Series", "Nixtla MSTL", "Prophet", "Python", "Jupyter"],
-      github: "https://github.com/ShivanshiAg/Retail-Supply-Chain-Analytics-Demand-Forecasting-Prediction",
-      category: "Data Science"
-    },
-    {
-      id: 5,
-      title: "Flight Delay Prediction",
-      description: "End-to-end ML modeling pipeline for flight delay risk prediction with SHAP explainability and deployment-ready notebook.",
-      tech: ["XGBoost", "SHAP", "EDA", "Python", "Scikit-learn"],
-      github: "https://github.com/ShivanshiAg/Flight_delay_EDA_Prediction",
-      category: "Data Science"
-    },
-    {
-      id: 6,
-      title: "Customer Churn Prediction",
-      description: "Deep learning pipeline for churn classification using Artificial Neural Networks. Includes saved artifacts and optional Streamlit app for inference.",
-      tech: ["Keras", "ANN", "Deep Learning", "Streamlit", "MLOps"],
-      github: "https://github.com/ShivanshiAg/Churn-prediction-using-Deep-learning",
-      category: "Deep Learning"
-    },
-    {
-      id: 7,
-      title: "ETL & MLOps Pipeline",
-      description: "Containerized ETL with comprehensive tests and CI hooks. Includes Dockerfile, requirements, and MongoDB test harness for validation.",
-      tech: ["Docker", "ETL", "Airflow", "MongoDB", "Testing"],
-      github: "https://github.com/ShivanshiAg/ETL_MLOps",
-      category: "Engineering"
-    },
-    {
-      id: 8,
-      title: "Bank Marketing Analysis",
-      description: "Comprehensive analysis of bank marketing campaigns with predictive modeling to identify factors influencing term deposit subscriptions.",
-      tech: ["Python", "Pandas", "Visualization", "ML", "Statistics"],
-      github: "https://github.com/ShivanshiAg/Bank-Marketing-Analysis",
-      category: "Data Science"
+    :root {
+      --primary: #6366f1; /* indigo-500 */
+      --primary-light: #818cf8; /* indigo-400 */
+      --accent: #06b6d4; /* cyan-500 */
+      --accent-glow: #06b6d433;
+      --bg-dark: #0f0f23;
+      --bg-card: #1a1a2e;
+      --bg-hover: #16213e;
+      --text-primary: #f0f0f0;
+      --text-secondary: #a8a8b8;
+      --border: #2a2a4a;
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     }
-  ];
 
-  const skills = {
-    "Languages & Databases": ["Python", "SQL", "T-SQL", "PostgreSQL", "MongoDB", "MySQL"],
-    "AI/ML & Frameworks": ["LangChain", "RAG", "Prophet", "XGBoost", "TensorFlow", "Keras", "Scikit-learn"],
-    "Data & Analytics": ["Pandas", "NumPy", "Power BI", "Tableau", "A/B Testing", "Statistical Analysis"],
-    "MLOps & Engineering": ["Docker", "Kubernetes", "Airflow", "ETL", "CI/CD", "Git", "Azure"]
-  };
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
 
-  const experience = [
-    {
-      role: "Graduate Research Assistant",
-      company: "Oklahoma State University",
-      period: "2024 - Present",
-      description: "Building analytics products and conducting research in data science and AI applications."
-    },
-    {
-      role: "Data Scientist",
-      company: "Previous Experience",
-      period: "5+ Years",
-      description: "Developed ML models, RAG systems, and analytics solutions that improved business metrics by 40%."
-    }
-  ];
+    /* Animated Background */
+    .bg-animation { position: fixed; inset: 0; z-index: -1; background: linear-gradient(180deg, #0f0f23 0%, #1a1a2e 100%); overflow: hidden; }
+    .bg-animation::before { content: ''; position: absolute; width: 200%; height: 200%; top: -50%; left: -50%; background:
+        radial-gradient(circle at 20% 30%, #6366f133 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, #06b6d422 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, #f093fb11 0%, transparent 50%);
+      animation: float 22s ease-in-out infinite; }
+    @keyframes float { 0%,100%{ transform: rotate(0) scale(1);} 50%{ transform: rotate(180deg) scale(1.08);} }
 
-  const navItems = [
-    { id: 'about', label: 'About', icon: <Brain className="w-4 h-4" /> },
-    { id: 'projects', label: 'Projects', icon: <Folder className="w-4 h-4" /> },
-    { id: 'skills', label: 'Skills', icon: <Code className="w-4 h-4" /> },
-    { id: 'experience', label: 'Experience', icon: <BarChart className="w-4 h-4" /> },
-    { id: 'contact', label: 'Contact', icon: <Mail className="w-4 h-4" /> }
-  ];
+    .particle { position: fixed; pointer-events: none; opacity: 0.3; border-radius: 50%; animation: floatUp 15s linear infinite; }
+    @keyframes floatUp { 0%{ transform: translateY(100vh) translateX(0); opacity:0;} 10%,90%{ opacity:0.35;} 100%{ transform: translateY(-100vh) translateX(100px); opacity:0; } }
 
-  const scrollToSection = (sectionId) => {
-    setActiveTab(sectionId);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setMobileMenuOpen(false);
-  };
+    /* Nav */
+    nav { position: fixed; top: 0; width: 100%; padding: 1rem 2rem; background: rgba(15, 15, 35, 0.6); backdrop-filter: blur(10px); z-index: 1000; transition: all .3s ease; border-bottom: 1px solid transparent; }
+    nav.scrolled { background: rgba(15, 15, 35, 0.95); border-bottom-color: #1f2446; box-shadow: 0 4px 30px rgba(0,0,0,.3); }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; background: var(--gradient-1); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; position: relative; transition: color .25s ease; }
+    .nav-links a:hover { color: var(--primary-light); }
+    .nav-links a::after { content:''; position:absolute; bottom:-6px; left:0; width:0; height:2px; background: var(--primary-light); transition: width .25s ease; }
+    .nav-links a:hover::after { width: 100%; }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-purple-600/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-blue-600/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-      {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                SA
-              </span>
-            </div>
+    /* Hero */
+    .hero { min-height: 100vh; display:flex; align-items:center; justify-content:center; padding: 6rem 0 4rem; }
+    .hero-content { text-align:center; animation: fadeInUp 1s ease; }
+    @keyframes fadeInUp { from {opacity:0; transform: translateY(30px);} to{opacity:1; transform: translateY(0);} }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.6rem, 7.8vw, 5rem); font-weight: 700; margin-bottom: .8rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #06b6d4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color: transparent; background-size: 200% 200%; animation: gradient 3s ease infinite; }
+    @keyframes gradient { 0%{ background-position:0% 50%; } 50%{ background-position:100% 50%; } 100%{ background-position:0% 50%; } }
+    .subtitle { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1.6rem; font-weight: 400; }
+    .hero-badges { display:flex; flex-wrap:wrap; gap: .8rem; justify-content:center; margin-bottom: 2rem; }
+    .badge { padding: .5rem 1.1rem; background: rgba(99,102,241,.12); border: 1px solid rgba(99,102,241,.35); border-radius: 999px; font-size: .92rem; color: var(--primary-light); transition: all .25s ease; }
+    .badge:hover { background: rgba(99,102,241,.2); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(99,102,241,.35); }
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                    activeTab === item.id 
-                      ? 'bg-purple-600/20 text-purple-400 border border-purple-500/30' 
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {item.icon}
-                  <span>{item.label}</span>
-                </button>
-              ))}
-            </div>
+    .hero-cta { display:flex; gap: .9rem; justify-content:center; flex-wrap:wrap; }
+    .btn { padding: .85rem 1.6rem; border-radius: 999px; font-weight: 600; text-decoration:none; display:inline-flex; align-items:center; gap:.5rem; transition: all .25s ease; border: 2px solid var(--border); color: var(--text-primary); }
+    .btn-primary { background: var(--gradient-1); color: #fff; border: none; box-shadow: 0 6px 18px rgba(99,102,241,.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(99,102,241,.6); }
+    .btn-secondary:hover { background: var(--bg-card); border-color: var(--primary); color: var(--primary-light); }
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-white p-2"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
+    section { padding: 5rem 0; }
+    .section-title { font-family:'Space Grotesk', sans-serif; font-size: 2.3rem; text-align:center; margin-bottom: 3rem; position:relative; }
+    .section-title::after { content:''; position:absolute; bottom:-10px; left:50%; transform: translateX(-50%); width:60px; height:4px; background: var(--gradient-1); border-radius: 2px; }
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-gray-700">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center gap-2 w-full px-3 py-2 rounded-lg transition-all ${
-                    activeTab === item.id 
-                      ? 'bg-purple-600/20 text-purple-400' 
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {item.icon}
-                  <span>{item.label}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-      </nav>
+    /* About */
+    .about-content { background: var(--bg-card); border-radius: 20px; padding: 2rem 2.2rem; border: 1px solid var(--border); position:relative; overflow:hidden; }
+    .about-content::before { content:''; position:absolute; top:-50%; right:-50%; width:200%; height:200%; background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); animation: rotate 20s linear infinite; }
+    @keyframes rotate { from{ transform: rotate(0);} to{ transform: rotate(360deg);} }
+    .about-text { position:relative; z-index:1; font-size:1.08rem; color: var(--text-secondary); }
+    .highlight { color: var(--primary-light); font-weight:600; }
+    .award-banner { margin-top: 1.4rem; padding: .9rem 1rem; background: linear-gradient(135deg, rgba(99,102,241,.12), rgba(6,182,212,.12)); border-left: 4px solid var(--primary); border-radius: 10px; }
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient">
-            Shivanshi Agarwal
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            Data Scientist & AI Engineer
-          </p>
-          <p className="text-lg text-gray-400 mb-8">
-            ML · Agentic AI · RAG · Forecasting · MLOps
-          </p>
-          
-          {/* Award Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-400 mb-8">
-            <Award className="w-5 h-5" />
-            <span className="text-sm font-semibold">SAS Analytics Conference 2025 - Best Poster Award</span>
-          </div>
+    /* Projects */
+    .projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.6rem; margin-top: 2.2rem; }
+    .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; transition: all .25s ease; position:relative; overflow:hidden; cursor:pointer; }
+    .project-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background: var(--gradient-1); transform: scaleX(0); transition: transform .25s ease; }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.3); border-color: var(--primary); }
+    .project-title { font-size: 1.2rem; font-weight: 600; margin-bottom: .6rem; color: var(--text-primary); }
+    .project-description { color: var(--text-secondary); margin-bottom: 1rem; }
+    .project-tech { display:flex; flex-wrap:wrap; gap: .45rem; margin-bottom: 1rem; }
+    .tech-tag { padding: .28rem .7rem; background: rgba(6,182,212,.12); border: 1px solid rgba(6,182,212,.35); border-radius: 999px; font-size: .86rem; color: var(--accent); }
+    .project-links { display:flex; gap:.9rem; }
+    .project-link { color: var(--primary-light); text-decoration:none; font-weight:500; }
+    .project-link:hover { color: var(--primary); }
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://github.com/ShivanshiAg?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-all transform hover:scale-105"
-            >
-              <Github className="w-5 h-5" />
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/shivanshi-agarwal25/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all transform hover:scale-105"
-            >
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
-            </a>
-            <a
-              href="resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg transition-all"
-            >
-              <Download className="w-5 h-5" />
-              Resume
-            </a>
-          </div>
-        </div>
-      </section>
+    /* Skills */
+    .skills-container { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.6rem; margin-top: 2.2rem; }
+    .skill-category { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.4rem; transition: all .25s ease; }
+    .skill-category:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.22); }
+    .skill-category h3 { color: var(--primary-light); margin-bottom: .7rem; font-size: 1.08rem; }
+    .skill-list { display:flex; flex-wrap:wrap; gap: .45rem; }
+    .skill-item { padding: .36rem .7rem; background: rgba(99,102,241,.12); border-radius: 12px; font-size: .9rem; color: var(--text-secondary); transition: all .2s ease; }
+    .skill-item:hover { background: rgba(99,102,241,.22); color: var(--text-primary); }
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">About Me</h2>
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I'm a data professional with <span className="text-purple-400 font-semibold">5+ years of experience</span> turning 
-              messy datasets into business impact — optimizing ROI, retention, and revenue through experimentation, 
-              forecasting, and decision-ready dashboards.
-            </p>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I've shipped <span className="text-blue-400 font-semibold">Text-to-SQL RAG systems</span>, automated ETL to cut 
-              reporting time, and built models that reveal payment anomalies in healthcare claims. My expertise spans from 
-              building multi-agent AI systems to deploying production ML pipelines.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Currently pursuing my MS at Oklahoma State University, where I recently won the 
-              <span className="text-yellow-400 font-semibold"> Best Poster Award at SAS Analytics Conference 2025</span> for 
-              an innovative analytics product.
-            </p>
-          </div>
-        </div>
-      </section>
+    /* Contact */
+    .contact-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.4rem; text-align:center; max-width: 640px; margin: 0 auto; }
+    .contact-links { display:flex; justify-content:center; gap: 1.3rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .contact-link { display:flex; align-items:center; gap:.5rem; color: var(--text-secondary); text-decoration:none; transition: all .25s ease; padding: .8rem 1.2rem; border: 1px solid var(--border); border-radius: 10px; }
+    .contact-link:hover { color: var(--primary-light); border-color: var(--primary); transform: translateY(-2px); }
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Featured Projects</h2>
-          
-          {/* Project Categories */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['All', 'AI/ML', 'Data Science', 'Deep Learning', 'Engineering'].map((category) => (
-              <button
-                key={category}
-                className="px-4 py-2 rounded-full bg-slate-800/50 border border-purple-500/30 text-gray-300 hover:bg-purple-600/20 hover:text-purple-400 transition-all"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+    footer { padding: 2rem 0; text-align:center; color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 4rem; }
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:-translate-y-2"
-              >
-                {project.featured && (
-                  <div className="flex items-center gap-1 text-yellow-400 text-sm mb-3">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span>Featured</span>
-                  </div>
-                )}
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 text-xs rounded-full bg-purple-600/20 text-purple-400 border border-purple-500/30"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{project.category}</span>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span className="text-sm">View Code</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+    /* Responsive */
+    @media (max-width: 768px){ .nav-links{ display:none;} .hero h1{ font-size: 2.6rem; } .projects-grid{ grid-template-columns: 1fr; } .skills-container{ grid-template-columns: 1fr; } }
 
-          {/* View All Projects Button */}
-          <div className="text-center mt-12">
-            <a
-              href="https://github.com/ShivanshiAg?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg transition-all transform hover:scale-105"
-            >
-              <GitBranch className="w-5 h-5" />
-              View All Repositories
-              <ChevronRight className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-      </section>
+    /* Animations */
+    .fade-in { opacity: 0; animation: fadeIn .6s ease forwards; }
+    @keyframes fadeIn { to{ opacity: 1; } }
+    .reveal { opacity: 0; transform: translateY(30px); transition: all .8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="bg-animation"></div>
+  <!-- Floating Particles -->
+  <div class="particle" style="left:10%; animation-delay:0s; width:3px; height:3px; background:#6366f1;"></div>
+  <div class="particle" style="left:30%; animation-delay:3s; width:4px; height:4px; background:#06b6d4;"></div>
+  <div class="particle" style="left:50%; animation-delay:6s; width:2px; height:2px; background:#f093fb;"></div>
+  <div class="particle" style="left:70%; animation-delay:9s; width:3px; height:3px; background:#667eea;"></div>
+  <div class="particle" style="left:90%; animation-delay:12s; width:4px; height:4px; background:#764ba2;"></div>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Technical Skills</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(skills).map(([category, items]) => (
-              <div
-                key={category}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all"
-              >
-                <h3 className="text-lg font-semibold text-purple-400 mb-4 flex items-center gap-2">
-                  {category.includes('Languages') && <Code className="w-5 h-5" />}
-                  {category.includes('AI/ML') && <Brain className="w-5 h-5" />}
-                  {category.includes('Data') && <Database className="w-5 h-5" />}
-                  {category.includes('MLOps') && <BarChart className="w-5 h-5" />}
-                  {category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((skill, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 text-sm rounded-lg bg-slate-700/50 text-gray-300 hover:bg-purple-600/20 hover:text-purple-400 transition-all cursor-default"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Experience</h2>
-          
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                  <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
-                  <span className="text-purple-400 text-sm">{exp.period}</span>
-                </div>
-                <p className="text-purple-300 mb-2">{exp.company}</p>
-                <p className="text-gray-400">{exp.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Get In Touch</h2>
-          
-          <div className="max-w-2xl mx-auto bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
-            <p className="text-center text-gray-300 mb-8">
-              I'm always interested in discussing new opportunities, collaborations, or innovative projects in data science and AI.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <a
-                href="mailto:shivanshiagarwal1996@gmail.com"
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-700/50 hover:bg-purple-600/20 text-gray-300 hover:text-purple-400 rounded-lg transition-all"
-              >
-                <Mail className="w-5 h-5" />
-                <span>Email</span>
-              </a>
-              
-              <a
-                href="https://www.linkedin.com/in/shivanshi-agarwal25/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-700/50 hover:bg-blue-600/20 text-gray-300 hover:text-blue-400 rounded-lg transition-all"
-              >
-                <Linkedin className="w-5 h-5" />
-                <span>LinkedIn</span>
-              </a>
-              
-              <a
-                href="https://github.com/ShivanshiAg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-700/50 hover:bg-purple-600/20 text-gray-300 hover:text-purple-400 rounded-lg transition-all"
-              >
-                <Github className="w-5 h-5" />
-                <span>GitHub</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 px-4 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto text-center text-gray-500">
-          <p>© 2025 Shivanshi Agarwal · Built with React & Tailwind CSS</p>
-        </div>
-      </footer>
-
-      <style jsx>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">SA</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  );
-};
+  </nav>
 
-export default Portfolio;
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Shivanshi Agarwal</h1>
+        <p class="subtitle">Data Scientist & AI Engineer — Agentic AI · RAG · ML Engineering · Forecasting · MLOps</p>
+        <div class="hero-badges">
+          <span class="badge">🤖 Agentic AI</span>
+          <span class="badge">🔮 RAG Systems</span>
+          <span class="badge">📈 Forecasting</span>
+          <span class="badge">📊 ML Engineering</span>
+          <span class="badge">🚀 MLOps</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><span>View Projects</span> <span>→</span></a>
+          <a href="https://github.com/ShivanshiAg?tab=repositories" target="_blank" class="btn btn-secondary"><span>GitHub</span> <span>↗</span></a>
+          <a href="https://www.linkedin.com/in/shivanshi-agarwal25/" target="_blank" class="btn btn-secondary"><span>LinkedIn</span> <span>↗</span></a>
+          <a href="resume.pdf" target="_blank" class="btn btn-secondary"><span>Resume</span> <span>↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="reveal">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p class="about-text">I'm a data professional with <span class="highlight">5+ years of experience</span> turning messy datasets into impact. I build agentic systems, RAG‑augmented search, and end‑to‑end ML pipelines that ship.</p>
+        <p class="about-text">I've delivered <span class="highlight">Text‑to‑SQL RAG systems</span>, automated ETL to cut reporting time, and models that reveal payment anomalies in healthcare claims. Recently: <strong>SAS Analytics Conference 2025 – Best Poster Award</strong> for an analytics product built during my MS at Oklahoma State University.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3 class="project-title">🤖 Agentic Trip Planner</h3>
+          <p class="project-description">Multi‑agent itinerary planner with tool‑calling, prompt library, and orchestration.</p>
+          <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">LangGraph</span><span class="tech-tag">Agents</span></div>
+          <div class="project-links"><a href="https://github.com/ShivanshiAg/AI_Trip_Plannner" target="_blank" class="project-link">View Code →</a></div>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">🎌 Anime Recommender System</h3>
+          <p class="project-description">Embeddings + Chroma vector DB; includes Docker/K8s manifests for LLMOps.</p>
+          <div class="project-tech"><span class="tech-tag">Embeddings</span><span class="tech-tag">Chroma</span><span class="tech-tag">Docker</span><span class="tech-tag">K8s</span></div>
+          <div class="project-links"><a href="https://github.com/ShivanshiAg/ANIME-RECOMMENDER" target="_blank" class="project-link">View Code →</a></div>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">💬 Text‑to‑SQL (RAG)</h3>
+          <p class="project-description">NL → SQL over multi‑DB healthcare claims; ~40% faster analytics for ops teams.</p>
+          <div class="project-tech"><span class="tech-tag">RAG</span><span class="tech-tag">SQL</span><span class="tech-tag">Vector DB</span></div>
+          <div class="project-links"><a href="https://github.com/ShivanshiAg?tab=repositories" target="_blank" class="project-link">Summary →</a></div>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">📈 Retail Demand Forecasting</h3>
+          <p class="project-description">MSTL/TimeGPT baselines; EDA + model comparison with sMAPE/MAE.</p>
+          <div class="project-tech"><span class="tech-tag">Time Series</span><span class="tech-tag">Nixtla MSTL</span><span class="tech-tag">Python</span></div>
+          <div class="project-links"><a href="https://github.com/ShivanshiAg/Retail-Supply-Chain-Analytics-Demand-Forecasting-Prediction" target="_blank" class="project-link">View Code →</a></div>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">✈️ Flight Delay Prediction</h3>
+          <p class="project-description">Delay risk modeling with SHAP explainability; deployment‑ready notebook.</p>
+          <div class="project-tech"><span class="tech-tag">XGBoost</span><span class="tech-tag">SHAP</span><span class="tech-tag">EDA</span></div>
+          <div class="project-links"><a href="https://github.com/ShivanshiAg/Flight_delay_EDA_Prediction" target="_blank" class="project-link">View Code →</a></div>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">🔄 ETL & MLOps Pipeline</h3>
+          <p class="project-description">Containerized ETL with tests/CI and MongoDB harness for validation.</p>
+          <div class="project-tech"><span class="tech-tag">Docker</span><span class="tech-tag">ETL</span><span class="tech-tag">MLOps</span><span class="tech-tag">Testing</span></div>
+          <div class="project-links"><a href="https://github.com/ShivanshiAg/ETL_MLOps" target="_blank" class="project-link">View Code →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category"><h3>🔧 Languages & Databases</h3>
+          <div class="skill-list"><span class="skill-item">Python</span><span class="skill-item">SQL</span><span class="skill-item">T‑SQL</span><span class="skill-item">PostgreSQL</span><span class="skill-item">MongoDB</span></div>
+        </div>
+        <div class="skill-category"><h3>🤖 AI/ML & Data Science</h3>
+          <div class="skill-list"><span class="skill-item">LangChain</span><span class="skill-item">RAG</span><span class="skill-item">Prophet</span><span class="skill-item">XGBoost</span><span class="skill-item">TensorFlow</span><span class="skill-item">Pandas</span><span class="skill-item">NumPy</span></div>
+        </div>
+        <div class="skill-category"><h3>📊 Analytics & Viz</h3>
+          <div class="skill-list"><span class="skill-item">Power BI</span><span class="skill-item">Tableau</span><span class="skill-item">A/B Testing</span><span class="skill-item">Stats</span><span class="skill-item">EDA</span></div>
+        </div>
+        <div class="skill-category"><h3>🚀 MLOps & Eng</h3>
+          <div class="skill-list"><span class="skill-item">Docker</span><span class="skill-item">Kubernetes</span><span class="skill-item">Airflow</span><span class="skill-item">ETL</span><span class="skill-item">CI/CD</span><span class="skill-item">Git</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-container">
+        <p style="color: var(--text-secondary); margin-bottom: 1.2rem;">Open to ML/AI, agentic systems, and data science roles. Happy to chat about collaborations.</p>
+        <div class="contact-links">
+          <a href="mailto:shivanshiagarwal1996@gmail.com" class="contact-link">Email</a>
+          <a href="https://www.linkedin.com/in/shivanshi-agarwal25/" target="_blank" class="contact-link">LinkedIn</a>
+          <a href="https://github.com/ShivanshiAg?tab=repositories" target="_blank" class="contact-link">GitHub</a>
+          <a href="resume.pdf" target="_blank" class="contact-link">Resume (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="y"></span> Shivanshi Agarwal · Built with GitHub Pages</footer>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // nav on scroll
+    const nav = document.getElementById('navbar');
+    const onScroll = () => { if(window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); };
+    document.addEventListener('scroll', onScroll); onScroll();
+    // reveal on scroll
+    const revealEls = Array.from(document.querySelectorAll('.reveal'));
+    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('active'); io.unobserve(e.target);} }); }, { threshold: .14 });
+    revealEls.forEach(el=> io.observe(el));
+  </script>
+</body>
+</html>
