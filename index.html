@@ -123,24 +123,6 @@
     @keyframes fadeIn { to{ opacity: 1; } }
     .reveal { opacity: 0; transform: translateY(30px); transition: all .8s ease; }
     .reveal.active { opacity: 1; transform: translateY(0); }
-    /* ✅ Avatar image style */
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: inline-block;
-      margin-bottom: 1.25rem;
-      border: 3px solid rgba(255,255,255,0.12);
-      box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 4px rgba(6,182,212,.18);
-    }
-
-    @media (min-width: 768px) {
-      .avatar {
-        width: 140px;
-        height: 140px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -171,15 +153,6 @@
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-content">
-        <img
-        class="avatar"
-        src="profile.jpg"  <!-- or assets/profile.jpg, or https://github.com/ShivanshiAg.png?size=240 -->
-        alt="Shivanshi Agarwal"
-        width="160"
-        height="160"
-        loading="lazy"
-        decoding="async"
-        />
         <h1>Shivanshi Agarwal</h1>
         <p class="subtitle">Data Scientist & AI Engineer — Agentic AI · RAG · ML Engineering · Forecasting · MLOps</p>
         <div class="hero-badges">
@@ -307,4 +280,4 @@
     revealEls.forEach(el=> io.observe(el));
   </script>
 </body>
-</html>
+</html
