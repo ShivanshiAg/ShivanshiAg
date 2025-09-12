@@ -1,89 +1,58 @@
-# Hi, I’m Shivanshi Agarwal
+<!-- Banner -->
+<h1 align="center">Hi, I'm Shivanshi Agarwal 👋</h1>
+<h3 align="center">
+Data Scientist · AI Engineer — Agentic AI · RAG · Forecasting · MLOps
+</h3>
 
-**Data Scientist | AI Engineer** working across **Agentic AI, RAG, ML Ops, and Forecasting**. I build end‑to‑end systems— from data pipelines and modeling to deployment—focused on pragmatic impact and clean engineering.
-
-[**Portfolio**](https://shivanshiag.github.io/ShivanshiAg/) · [**LinkedIn**](https://www.linkedin.com/in/shivanshi-agarwal25/) · [**Email**](mailto:shivanshiagarwal1996@gmail.com)
+<p align="center">
+  <a href="https://shivanshiag.github.io/ShivanshiAg/"><img src="https://img.shields.io/badge/Portfolio-%2306b6d4?style=for-the-badge&logo=githubpages&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/shivanshi-agarwal25/"><img src="https://img.shields.io/badge/LinkedIn-%230A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:shivanshiagarwal1996@gmail.com"><img src="https://img.shields.io/badge/Email-%23EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+</p>
 
 ---
 
-## 🛠️ Tech Stack  
+## 🧠 About Me
 
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Postgres%20%7C%20Snowflake-informational?logo=postgresql)
-![ML](https://img.shields.io/badge/ML-Scikit--learn%20%7C%20XGBoost-orange?logo=scikit-learn)
-![Deep Learning](https://img.shields.io/badge/DL-PyTorch%20%7C%20TensorFlow-red?logo=pytorch)
-![MLOps](https://img.shields.io/badge/MLOps-MLflow%20%7C%20Docker%20%7C%20AWS-success?logo=docker)
-![GenAI](https://img.shields.io/badge/GenAI-LangChain%20%7C%20OpenAI%20%7C%20Gemini-purple?logo=openai)
-![Dashboarding](https://img.shields.io/badge/BI-Tableau%20%7C%20Power%20BI-yellow?logo=tableau)
-
-</div>
-
+- 🧩 Building **Agentic AI systems** (multi-agent planners, tool-using LLM pipelines)
+- 📊 Experienced in **Forecasting, RAG, ML Modeling, ETL/MLOps**
+- 🏆 Winner — **SAS Analytics Conference 2025, Best Poster Award**
+- 🎓 MS in Data Science & Business Analytics @ Oklahoma State University
 
 ---
 
 ## 🚀 Featured Projects
 
-### 1) Agentic Trip Planner (Multi‑Agent)
-
-Multi‑agent itinerary planner with tool‑calling, prompt library, and orchestration.
-
-* **Stack:** Python, LangGraph/LangChain (agents)
-* **Repo:** [https://github.com/ShivanshiAg/AI\_Trip\_Plannner](https://github.com/ShivanshiAg/AI_Trip_Plannner)
-
-### 2) Anime Recommender (Embeddings + Vector DB)
-
-Content‑based recommendations using embeddings with **Chroma**; includes Docker/K8s manifests for LLMOps.
-
-* **Stack:** Python, Chroma, HuggingFace, Docker, K8s
-* **Repo:** [https://github.com/ShivanshiAg/ANIME-RECOMMENDER](https://github.com/ShivanshiAg/ANIME-RECOMMENDER)
-
-### 3) Text‑to‑SQL (RAG) — Case Notes
-
-RAG‑augmented NL→SQL over multi‑DB healthcare claims; \~40% query time reduction and faster analytics for ops teams.
-
-* **Stack:** LangChain, Vector DB, SQL
-* **Summary:** [https://github.com/ShivanshiAg?tab=repositories](https://github.com/ShivanshiAg?tab=repositories)
-
-### 4) Retail Demand Forecasting
-
-MSTL/TimeGPT baselines to forecast weekly store‑SKU demand with comprehensive EDA and model comparison (sMAPE/MAE).
-
-* **Stack:** Python, Nixtla MSTL, Pandas
-* **Repo:** [https://github.com/ShivanshiAg/Retail-Supply-Chain-Analytics-Demand-Forecasting-Prediction](https://github.com/ShivanshiAg/Retail-Supply-Chain-Analytics-Demand-Forecasting-Prediction)
-
-### 5) Flight Delay Prediction + SHAP
-
-End‑to‑end ML pipeline for delay risk prediction; SHAP explainability; deployment‑ready notebook.
-
-* **Stack:** XGBoost, SHAP, FastAPI (planned)
-* **Repo:** [https://github.com/ShivanshiAg/Flight\_delay\_EDA\_Prediction](https://github.com/ShivanshiAg/Flight_delay_EDA_Prediction)
-
-### 6) ETL & MLOps — Phishing Dataset
-
-Containerized ETL with tests/CI and MongoDB harness for validation.
-
-* **Stack:** Docker, ETL, Testing
-* **Repo:** [https://github.com/ShivanshiAg/ETL\_MLOps](https://github.com/ShivanshiAg/ETL_MLOps)
-
-> More repos ➜ [https://github.com/ShivanshiAg?tab=repositories](https://github.com/ShivanshiAg?tab=repositories)
+| Project | Description | Tech Stack |
+|--------|-------------|-------------|
+| [Agentic Trip Planner](https://github.com/ShivanshiAg/AI_Trip_Plannner) | Multi-agent itinerary planner with tool-calling, prompts, orchestrator | Python, LangGraph, Agents |
+| [Anime Recommender](https://github.com/ShivanshiAg/ANIME-RECOMMENDER) | Embeddings + Chroma vector DB with Docker/K8s deployment | Chroma, HuggingFace, Docker |
+| [Text-to-SQL RAG](https://github.com/ShivanshiAg?tab=repositories) | NL→SQL over 4+ DBs, ~40% faster analytics | LangChain, RAG, SQL |
+| [Retail Demand Forecasting](https://github.com/ShivanshiAg/Retail-Supply-Chain-Analytics-Demand-Forecasting-Prediction) | MSTL/TimeGPT baselines, EDA + metrics | Python, Nixtla MSTL |
+| [Flight Delay Prediction](https://github.com/ShivanshiAg/Flight_delay_EDA_Prediction) | ML pipeline + SHAP explainability | XGBoost, SHAP |
+| [ETL & MLOps](https://github.com/ShivanshiAg/ETL_MLOps) | Containerized ETL with tests & CI hooks | Docker, MongoDB, ETL |
 
 ---
 
-## 🏆 Highlights
+## ⚡ Tech Stack
 
-* **SAS Analytics Conference 2025 — Best Poster Award** (for an analytics product built during my MS at Oklahoma State University)
-* Built Text‑to‑SQL RAG architecture used by business users to access 4+ databases faster
-* Designed forecasting, claims analytics, and anomaly detection initiatives end‑to‑end
+![Python](https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-%23025E8C?style=for-the-badge&logo=postgresql&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-%2306b6d4?style=for-the-badge&logo=chainlink&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-%230099ff?style=for-the-badge&logo=azurepipelines&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-%230db7ed?style=for-the-badge&logo=docker&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-%23017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+![Power BI](https://img.shields.io/badge/PowerBI-%23F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+
+---
+
+## 📫 Connect
+
+- 📧 Email: [shivanshiagarwal1996@gmail.com](mailto:shivanshiagarwal1996@gmail.com)  
+- 💼 LinkedIn: [shivanshi-agarwal25](https://www.linkedin.com/in/shivanshi-agarwal25/)  
+- 🌐 Portfolio: [shivanshiag.github.io/ShivanshiAg](https://shivanshiag.github.io/ShivanshiAg/)
 
 ---
 
-## 📫 Contact
-
-* **Email:** [shivanshiagarwal1996@gmail.com](mailto:shivanshiagarwal1996@gmail.com)
-* **LinkedIn:** [https://www.linkedin.com/in/shivanshi-agarwal25/](https://www.linkedin.com/in/shivanshi-agarwal25/)
-* **Portfolio:** [https://shivanshiag.github.io/ShivanshiAg/](https://shivanshiag.github.io/ShivanshiAg/)
-
----
-> If you’re hiring for **Data Science / AI Engineering** (Agentic AI, RAG, Forecasting, MLOps), I’d love to chat.
+⭐️ _Pinned repos recommended:_  
+`AI_Trip_Plannner` · `ANIME-RECOMMENDER` · `Retail-Supply-Chain-Analytics-Demand-Forecasting-Prediction` · `Flight_delay_EDA_Prediction` · `ETL_MLOps`
