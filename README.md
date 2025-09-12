@@ -42,17 +42,19 @@
 
 ---
 
-## ⚡ Tech Stack
+## 🛠️ Tech Stack  
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQL-%23025E8C?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangChain-%2306b6d4?style=for-the-badge&logo=chainlink&logoColor=white" />
-  <img src="https://img.shields.io/badge/XGBoost-%230099ff?style=for-the-badge&logo=azurepipelines&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-%230db7ed?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Airflow-%23017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/PowerBI-%23F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
-</p>
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Postgres%20%7C%20Snowflake-informational?logo=postgresql)
+![ML](https://img.shields.io/badge/ML-Scikit--learn%20%7C%20XGBoost-orange?logo=scikit-learn)
+![Deep Learning](https://img.shields.io/badge/DL-PyTorch%20%7C%20TensorFlow-red?logo=pytorch)
+![MLOps](https://img.shields.io/badge/MLOps-MLflow%20%7C%20Docker%20%7C%20AWS-success?logo=docker)
+![GenAI](https://img.shields.io/badge/GenAI-LangChain%20%7C%20OpenAI%20%7C%20Gemini-purple?logo=openai)
+![Dashboarding](https://img.shields.io/badge/BI-Tableau%20%7C%20Power%20BI-yellow?logo=tableau)
+
+</div>
 
 ---
 
