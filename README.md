@@ -26,6 +26,7 @@
 - 📊 Experienced in **Forecasting, RAG, ML Modeling, ETL, and MLOps**
 - 🏆 **Best Poster Award — SAS Analytics Conference 2025**
 - 🎓 MS in **Data Science & Business Analytics @ Oklahoma State University**
+- Built **0→1 ML systems** with reproducibility, deployment, and monitoring in mind 
 
 ---
 
