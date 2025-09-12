@@ -45,19 +45,60 @@
 
 ## 🛠️ Tech Stack  
 
-<div align="center">
-
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Postgres%20%7C%20Snowflake-informational?logo=postgresql)
+
 ![ML](https://img.shields.io/badge/ML-Scikit--learn%20%7C%20XGBoost-orange?logo=scikit-learn)
 ![Deep Learning](https://img.shields.io/badge/DL-PyTorch%20%7C%20TensorFlow-red?logo=pytorch)
 ![MLOps](https://img.shields.io/badge/MLOps-MLflow%20%7C%20Docker%20%7C%20AWS-success?logo=docker)
 ![GenAI](https://img.shields.io/badge/GenAI-LangChain%20%7C%20OpenAI%20%7C%20Gemini-purple?logo=openai)
 ![Dashboarding](https://img.shields.io/badge/BI-Tableau%20%7C%20Power%20BI-yellow?logo=tableau)
 
-</div>
+---
+## 💻 Languages  
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python)
+![SQL](https://img.shields.io/badge/-SQL-003B57?style=flat&logo=database&logoColor=white)
 
 ---
+
+## 🚀 Backend Technologies  
+![Flask](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=flask&logoColor=white)
+
+---
+
+## 🗄️ Databases  
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Postgres%20%7C%20Snowflake-informational?logo=postgresql)
+
+---
+
+## 🧠 Data Science & Machine Learning  
+![Pandas](https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/-Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/-Matplotlib-11557C?style=flat-square&logo=matplotlib&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![NLTK](https://img.shields.io/badge/-NLTK-00A67E?style=flat-square&logo=nltk&logoColor=white)
+
+---
+
+## 🤖 Generative AI  
+![OpenAI](https://img.shields.io/badge/-OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/-LangChain-000000?style=flat-square&logo=langchain&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/-HuggingFace-FFD21F?style=flat-square&logo=huggingface&logoColor=black)
+![Vector DB](https://img.shields.io/badge/-ChromaDB-00B2FF?style=flat-square)
+![Ollama](https://img.shields.io/badge/-Ollama-24292E?style=flat-square&logo=github)
+
+---
+
+## 🛠️ Dev Tools  
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/-VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Postman](https://img.shields.io/badge/-Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/-Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)
+
 
 ## 📫 Let’s Connect
 
