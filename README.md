@@ -3,6 +3,7 @@
 
 <h3 align="center">
 💻 Data Scientist · 🤖 AI Engineer  
+  
 <sub>Agentic AI · RAG · Forecasting · MLOps</sub>
 </h3>
 
